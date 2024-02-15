@@ -1,0 +1,8 @@
+---
+name: RStudio
+category: Interactive Apps
+role: batch_connect
+description: |
+  This app will launch [RStudio Server] server on the K8s cluster.
+
+  [RStudio Server]: https://www.rstudio.com/products/rstudio-server/
