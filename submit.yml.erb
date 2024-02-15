@@ -13,7 +13,7 @@ script:
   native:
     container:
       name: "rstudio"
-      image: "cdjs/rstudio:v0.0.14"
+      image: "ghcr.io/nesi/training-environment-rstudio-app:main"
       image_pull_policy: "IfNotPresent"
       command: ["/bin/bash","-l","<%= staged_root %>/job_script_content.sh"]
       restart_policy: 'OnFailure'
