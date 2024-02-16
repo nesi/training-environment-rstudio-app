@@ -7,20 +7,8 @@ form:
   - wall_time
 
 attributes:
-  cpu:
-    widget: number_field
-    min: 2
-    max: 2
-    default: 2
-    label: "CPUs"
-    required: true
-  memory:
-    widget: number_field
-    min: 4
-    max: 4
-    default: 4
-    label: "Memory (GB)"
-    required: true
+  cpu: 2
+  memory: 4
   wall_time:
     widget: number_field
     label: "Hours"
