@@ -1,4 +1,4 @@
-FROM rocker/rstudio:latest
+FROM rocker/geospatial:latest
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         curl \
@@ -22,8 +22,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 ARG KUBECTL_VERSION=v1.28.5
 RUN curl -LO https://dl.k8s.io/release/$KUBECTL_VERSION/bin/linux/amd64/kubectl \
-    && mv kubectl /usr/bin/kubectl \
-    && chmod +x /usr/bin/kubectl
+    && mv kubectl /usr/local/bin/kubectl \
+    && chmod +x /usr/local/bin/kubectl
 
 ARG UTILS_HASH=b2430738bd8d980febbc8b3920c413e001ae4128
 RUN git clone https://github.com/chrisdjscott/ood-k8s-utils.git /opt/ood-k8s-utils \
