@@ -29,17 +29,14 @@ sed 's/^ \{2\}//' > "$WORKING_DIR/rsession.sh" << EOL
   # Launch the original command
   echo "Launching rsession..."
   set -x
-  exec rsession --session-default-working-dir=~/rstudio-work --session-default-new-project-dir=~/rstudio-projects "\${@}"
+  exec rsession "\${@}"
 EOL
 )
 chmod 700 "$WORKING_DIR/rsession.sh"
 mkdir -p "$WORKING_DIR/logs"
 mkdir -p /tmp/rserver-run
-mkdir -p ~/rstudio-work
-mkdir -p ~/rstudio-projects
 
-# change to home directory
-cd ~/rstudio-work
+cd $HOME
 
 set -x
 # Launch the RStudio Server

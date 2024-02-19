@@ -35,5 +35,3 @@ RUN git clone https://github.com/chrisdjscott/ood-k8s-utils.git /opt/ood-k8s-uti
 
 RUN echo "#!/bin/bash" > /bin/module \
     && chmod +x /bin/module
-
-COPY cleanup-homes /usr/local/bin/
