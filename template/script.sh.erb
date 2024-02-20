@@ -39,9 +39,13 @@ mkdir -p /tmp/rserver-run
 cd $HOME
 
 set -x
-# Launch the RStudio Server
 echo "Starting up rserver..."
 
+# create directory for intro to R
+mkdir -p ~/R4Genomics
+cp -vf /opt/Introduction-to-R/combined_tidy_vcf.csv ~/R4Genomics/
+
+# launch rserver
 rserver \
     --www-port=8080 \
     --auth-none=0 \
