@@ -41,7 +41,7 @@ RUN echo "#!/bin/bash" > /bin/module \
     && chmod +x /bin/module
 
 # copy the introduction to R source into the repo
-ARG=INTROR_HASH=0729df3d1877356c120612586ca541cf8da17b0e
+ARG INTROR_HASH=0729df3d1877356c120612586ca541cf8da17b0e
 RUN git clone https://github.com/GenomicsAotearoa/Introduction-to-R /opt/Introduction-to-R \
     && cd /opt/Introduction-to-R \
     && git checkout $INTROR_HASH \
