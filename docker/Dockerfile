@@ -44,9 +44,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN Rscript -e 'install.packages("vegan")' \
     && Rscript -e 'install.packages("palmerpenguins")' \
     && Rscript -e 'remotes::install_github("G-Thomson/Manu")' \
-    && Rscript -e 'remotes::install_github("viridis")' \
-    && Rscript -e 'remotes::install_github("ggbeeswarm")' \
-    && Rscript -e 'remotes::install_github("ggtext")'
+    && Rscript -e 'install.packages("viridis")' \
+    && Rscript -e 'install.packages("ggbeeswarm")' \
+    && Rscript -e 'install.packages("ggtext")'
 
 # copy the introduction to R source into the repo
 ARG INTROR_HASH=0729df3d1877356c120612586ca541cf8da17b0e
