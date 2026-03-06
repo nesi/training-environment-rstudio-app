@@ -24,5 +24,5 @@ curl, git, nano, vim (text editors)
 unzip, wget, zip (utilities)
 
 ### Workshops
-[Introduction to R](https://genomicsaotearoa.github.io/Introduction-to-R/)
-[Vizualization](https://genomicsaotearoa.github.io/visualization_day/)
+[Introduction to R](https://genomicsaotearoa.github.io/Introduction-to-R/)  
+[Vizualization](https://genomicsaotearoa.github.io/visualization_day/)  
