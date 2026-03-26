@@ -1,4 +1,4 @@
-FROM rocker/geospatial:latest
+FROM rocker/geospatial:4.5.3
 
 # install kubectl, required for running on the k8s cluster
 ARG KUBECTL_VERSION=v1.28.5
