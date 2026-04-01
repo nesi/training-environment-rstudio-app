@@ -40,23 +40,23 @@ RUN git clone https://github.com/nesi/training-environment-k8s-utils.git /opt/oo
 RUN echo "#!/bin/bash" > /bin/module \
     && chmod +x /bin/module
 
-# install R packages
-RUN Rscript -e 'install.packages("vegan")' \
-    && Rscript -e 'install.packages("palmerpenguins")' \
-    && Rscript -e 'remotes::install_github("G-Thomson/Manu")' \
-    && Rscript -e 'install.packages("viridis")' \
-    && Rscript -e 'install.packages("ggbeeswarm")' \
-    && Rscript -e 'install.packages("ggtext")' \
-    && Rscript -e 'install.packages("ggridges")'
+# # install R packages
+# RUN Rscript -e 'install.packages("vegan")' \
+#     && Rscript -e 'install.packages("palmerpenguins")' \
+#     && Rscript -e 'remotes::install_github("G-Thomson/Manu")' \
+#     && Rscript -e 'install.packages("viridis")' \
+#     && Rscript -e 'install.packages("ggbeeswarm")' \
+#     && Rscript -e 'install.packages("ggtext")' \
+#     && Rscript -e 'install.packages("ggridges")'
 
-# test loading R packages
-RUN Rscript -e 'library(vegan)' \
-    && Rscript -e 'library(palmerpenguins)' \
-    && Rscript -e 'library(Manu)' \
-    && Rscript -e 'library(viridis)' \
-    && Rscript -e 'library(ggbeeswarm)' \
-    && Rscript -e 'library(ggtext)' \
-    && Rscript -e 'library(ggridges)'
+# # test loading R packages
+# RUN Rscript -e 'library(vegan)' \
+#     && Rscript -e 'library(palmerpenguins)' \
+#     && Rscript -e 'library(Manu)' \
+#     && Rscript -e 'library(viridis)' \
+#     && Rscript -e 'library(ggbeeswarm)' \
+#     && Rscript -e 'library(ggtext)' \
+#     && Rscript -e 'library(ggridges)'
 
 # copy the introduction to R source into the repo
 ARG INTROR_HASH=0729df3d1877356c120612586ca541cf8da17b0e
