@@ -43,7 +43,7 @@ RUN echo "#!/bin/bash" > /bin/module \
 # install R packages
 RUN Rscript -e 'install.packages("vegan")' \
     && Rscript -e 'install.packages("palmerpenguins")' \
-    && Rscript -e 'remotes::install_github("G-Thomson/Manu")' \
+    # && Rscript -e 'remotes::install_github("G-Thomson/Manu")' \
     && Rscript -e 'install.packages("viridis")' \
     && Rscript -e 'install.packages("ggbeeswarm")' \
     && Rscript -e 'install.packages("ggtext")' \
@@ -52,7 +52,7 @@ RUN Rscript -e 'install.packages("vegan")' \
 # test loading R packages
 RUN Rscript -e 'library(vegan)' \
     && Rscript -e 'library(palmerpenguins)' \
-    && Rscript -e 'library(Manu)' \
+    # && Rscript -e 'library(Manu)' \
     && Rscript -e 'library(viridis)' \
     && Rscript -e 'library(ggbeeswarm)' \
     && Rscript -e 'library(ggtext)' \
