@@ -42,6 +42,7 @@ RUN echo "#!/bin/bash" > /bin/module \
 
 # install R packages
 RUN Rscript -e 'install.packages("vegan")' \
+    && Rscript -e 'install.packages("devtools")' \
     && Rscript -e 'install.packages("palmerpenguins")' \
     && Rscript -e 'devtools::install_github("G-Thomson/Manu")' \
     && Rscript -e 'install.packages("viridis")' \
