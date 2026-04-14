@@ -42,9 +42,9 @@ RUN echo "#!/bin/bash" > /bin/module \
 
 # install R packages
 RUN Rscript -e 'install.packages("vegan")' \
-    && Rscript -e 'install.packages("devtools")' \
+    && Rscript -e 'install.packages("remotes")' \
     && Rscript -e 'install.packages("palmerpenguins")' \
-    && Rscript -e 'devtools::install_github("G-Thomson/Manu")' \
+    && Rscript -e 'remotes::install_github("G-Thomson/Manu")' \
     && Rscript -e 'install.packages("viridis")' \
     && Rscript -e 'install.packages("ggbeeswarm")' \
     && Rscript -e 'install.packages("ggtext")' \
