@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.5.3
+FROM rocker/rstudio:4.5.0
 
 # install packages, some of these are required to make the container behave like ldap client
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
